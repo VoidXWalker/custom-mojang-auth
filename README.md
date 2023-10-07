@@ -1,4 +1,4 @@
-# mojang-auth
+# custom-mojang-auth
 A small library that allows your mod to automatically sign in to your custom server using the players mojang account. 
 Works for any minecraft version.
 This mod allows a server to reliably 
