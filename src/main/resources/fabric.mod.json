@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "mojangauth",
+  "version": "${version}",
+  "name": "MojangAuth",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {}
+}
