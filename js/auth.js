@@ -9,7 +9,7 @@ const SIGNATURE_ALGORITHM2 = "RSA-SHA1";
 const DIGEST_ALGORITHM = "sha256";
 const BASE_64 = "base64";
 
-export function isValid(uuid, randomLong, data, date, publicKeyString, signatureBytes, payload1, payload2) {
+export function isValid(uuid, randomLong, data, date, publicKeyString, signatureBytes, payload) {
   try {
     const buf1 = Buffer.alloc(294);
     const uint16array1 = new Int8Array(
@@ -24,8 +24,9 @@ export function isValid(uuid, randomLong, data, date, publicKeyString, signature
       verifier.update(uuid);
       verifier.update(digest(randomLong));
       verifier.update("70");
-      verifier.update(payload1);
-      verifier.update(payload2);
+      for (let index = 0; index < payload.length; ++index) {
+        verifier.update(payload[index]);
+      }
       verifier.end();
       return verifier.verify(publicKey, Buffer.from(data, BASE_64)) ? toUuidString(uuid) : null;
     }

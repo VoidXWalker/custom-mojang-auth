@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "mojangauth",
+  "id": "custommojangauth",
   "version": "${version}",
-  "name": "MojangAuth",
+  "name": "CustomMojangAuth",
   "description": "",
   "authors": [],
   "contact": {},
