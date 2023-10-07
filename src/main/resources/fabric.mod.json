@@ -3,8 +3,10 @@
   "id": "custommojangauth",
   "version": "${version}",
   "name": "CustomMojangAuth",
-  "description": "",
-  "authors": [],
+  "description": "A small library that allows your mod to automatically sign in to your custom server using the players mojang account",
+  "authors": [
+    "Void_X_Walker"
+  ],
   "contact": {},
   "license": "MIT",
   "environment": "client",
